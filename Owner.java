@@ -3,17 +3,12 @@ public class Owner {
  private String CPF;
  private String RG;
  private String Data_de_Nascimento;
- private String RUA;
- private String Bairro;
- private String Cidade;
- private String Estado;
- private String Cep;
- private String Complemento;
-
-public Owner(String Nome, String CPF, String RG){
+ private Endereço Endereço;
+public Owner(String Nome, String CPF, String RG, String RUA, String Bairro, String Cidade, String Estado, String Cep, String Complemento){
  this.Nome=Nome;
  this.CPF=CPF;
  this.RG=RG;
+ Endereço=new Endereço(Bairro, Cidade, Estado, Cep, Complemento );
 }
 
 
@@ -48,15 +43,61 @@ public Owner(String Nome, String CPF, String RG){
  public void setData_de_Nascimento(String data_de_Nascimento) {
   Data_de_Nascimento = data_de_Nascimento;
  }
-
- public String getRUA() {
-  return RUA;
+ public String getBairro() {
+  return Endereço.getBairro();
  }
 
- public void setRUA(String RUA) {
-  this.RUA = RUA;
+ public void setBairro(String Bairro) {
+  Endereço.setBairro(Bairro);
+ }
+ public String getCidade() {
+  return Endereço.getCidade();
  }
 
+ public void setCidade(String cidade) {
+  Endereço.setCidade(cidade);
+ }
+
+ public String getEstado() {
+  return Endereço.getEstado();
+ }
+
+ public void setEstado(String estado) {
+  Endereço.setEstado(estado);
+ }
+
+ public String getCep() {
+  return Endereço.getCep();
+ }
+
+ public void setCep(String cep) {
+  Endereço.setCep(cep);
+ }
+ public String getComplemento() {
+  return Endereço.getComplemento();
+ }
+
+ public void setComplemento(String complemento) {
+  Endereço.setComplemento(complemento);
+ }
+
+
+}
+
+class Endereço{
+ private String Bairro;
+ private String Cidade;
+ private String Estado;
+ private String Cep;
+ private String Complemento;
+
+ public Endereço(String Bairro, String Cidade, String Estado, String Cep, String Complemento){
+  this.setBairro(Bairro);
+  this.setCidade(Cidade);
+  this.setEstado(Estado);
+  this.setCep(Cep);
+  this.setComplemento(Complemento);
+ }
  public String getBairro() {
   return Bairro;
  }
