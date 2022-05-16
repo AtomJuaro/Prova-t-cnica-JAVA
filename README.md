@@ -2,6 +2,7 @@
 
 Examen técnico El objetivo de este examen es validar los conocimientos que tienen los instructores en relación a la
 programación JAVA. JAVA
+HOLA MUNDO
 
 1. Criterios de evaluación
 
