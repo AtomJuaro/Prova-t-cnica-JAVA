@@ -144,12 +144,12 @@ public class Carro {
         marcha--;
     }
 
-    public int calcular_autonomia(int consumo){
+    public int calcule_autonomia(int consumo){
         //considerando que la autonomia se calcula como consumo * volumen de combustible
         return consumo*this.Volume_de_combusvel;
     }
 
-    public void visualizar_volumen_combustible(){
+    public void exibir_volume_combustivel(){
         System.out.println("El volumen del combustible es: "+this.Volume_de_combusvel);
     }
 }
