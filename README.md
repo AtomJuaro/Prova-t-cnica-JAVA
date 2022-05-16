@@ -19,7 +19,7 @@ HOLA MUNDO
 ## Estructura de la aplicación
 
 *Antes de presentar la estructura de esta aplicación, es importante decir que está permitida realizar investigaciones
-para cumplir con los requisitos de estos proyectos. Proyecto Estructura 1 1- Implementar una clase Propietario 2-
+para cumplir con los requisitos de estos proyectos. Proyecto Estructura 1 1- Implementar una clase Owner 2-
 Declarar los siguientes atributos en la clase:
 
 - Nombre
@@ -36,7 +36,7 @@ Declarar los siguientes atributos en la clase:
 
 4- Los atributos name, cpf y rg son obligatorios (crear un constructor con estos parámetros)
 
-5- Implementar una clase de Auto
+5- Implementar una clase de Carro
 
 6- Declarar los siguientes atributos en la clase:
 
@@ -45,7 +45,7 @@ Declarar los siguientes atributos en la clase:
 - Año
 - Marca
 - chasis
-- Propietario
+- Owner
 - Velocidad máxima
 - Velocidad actual
 - Número de puertos
@@ -64,7 +64,7 @@ Declarar los siguientes atributos en la clase:
 
 11- Implementar el método _reduce la marcha;
 
-12- Cambiar la clase Propietario para que el atributo Dirección se convierta en una clase; 13- Encapsular los atributos
+12- Cambiar la clase Owner para que el atributo Dirección se convierta en una clase; 13- Encapsular los atributos
 de la clase Dirección;
 
 14- La dirección del propietario no puede estar vacía (cámbiela en el constructor para recibir la dirección);
