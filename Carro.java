@@ -12,9 +12,12 @@ public class Carro {
     private int Numero_de_Marchas;
     private boolean automatico;
     private int Volume_de_combusvel;
+    private int marcha;
+    private Owner Owner;
 
-    public Carro(){
+    public Carro(Owner Owner){
         this.Velocidade_atual=0;
+        this.Owner=Owner;
     }
 
     public String getModelo() {
@@ -121,11 +124,32 @@ public class Carro {
         Volume_de_combusvel = volume_de_combusvel;
     }
 
+    public int getMarcha() {
+        return marcha;
+    }
+
     public void acelera(){
         Velocidade_atual++;
     }
 
     public void freia(){
         Velocidade_atual=0;
+    }
+
+    public void troca_marcha(int marcha){
+        this.marcha=marcha;
+    }
+
+    public void reduz_a_marcha(){
+        marcha--;
+    }
+
+    public int calcular_autonomia(int consumo){
+        //considerando que la autonomia se calcula como consumo * volumen de combustible
+        return consumo*this.Volume_de_combusvel;
+    }
+
+    public void visualizar_volumen_combustible(){
+        System.out.println("El volumen del combustible es: "+this.Volume_de_combusvel);
     }
 }
