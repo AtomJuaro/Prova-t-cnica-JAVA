@@ -4,11 +4,11 @@ public class Owner {
  private String RG;
  private String Data_de_Nascimento;
  private Endereço Endereço;
-public Owner(String Nome, String CPF, String RG, String RUA, String Bairro, String Cidade, String Estado, String Cep, String Complemento){
+public Owner(String Nome, String CPF, String RG, Endereço Endereço){
  this.Nome=Nome;
  this.CPF=CPF;
  this.RG=RG;
- Endereço=new Endereço(Bairro, Cidade, Estado, Cep, Complemento );
+ this.Endereço=Endereço;
 }
 
 

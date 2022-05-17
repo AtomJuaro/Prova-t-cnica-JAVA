@@ -2,7 +2,7 @@ public class Carro {
     private String Modelo;
     private String Cor;
     private String Ano;
-    private String Marca;
+    private Marca Marca;
     private String Chassi;
     private String Proprietario;
     private int Velocidade_máxima;
@@ -15,9 +15,10 @@ public class Carro {
     private int marcha;
     private Owner Owner;
 
-    public Carro(Owner Owner){
+    public Carro(Owner Owner, Marca Marca){
         this.Velocidade_atual=0;
         this.Owner=Owner;
+        this.Marca= Marca;
     }
 
     public String getModelo() {
@@ -44,11 +45,11 @@ public class Carro {
         Ano = ano;
     }
 
-    public String getMarca() {
+    public Marca getMarca() {
         return Marca;
     }
 
-    public void setMarca(String marca) {
+    public void setMarca(Marca marca) {
         Marca = marca;
     }
 
@@ -141,7 +142,11 @@ public class Carro {
     }
 
     public void reduz_a_marcha(){
-        marcha--;
+        if(getVelocidade_atual()<=0){
+            marcha--;
+        }else{
+            System.out.println("16- A marcha ré nao pode ser engatada se o a velocidade for superior a 0 KM/h;");
+        }
     }
 
     public int calcule_autonomia(int consumo){
@@ -151,5 +156,51 @@ public class Carro {
 
     public void exibir_volume_combustivel(){
         System.out.println("El volumen del combustible es: "+this.Volume_de_combusvel);
+    }
+}
+
+class Marca{
+    private String nome;
+    private int nrDeModelos;
+    private String ano_de_lançamento;
+    private String codigo_idenficador;
+
+    public Marca(String nome, int nrDeModelos, String ano_de_lançamento, String codigo_idenficador){
+        this.setNome(nome);
+        this.setNrDeModelos(nrDeModelos);
+        this.setAno_de_lançamento(ano_de_lançamento);
+        this.setCodigo_idenficador(codigo_idenficador);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getNrDeModelos() {
+        return nrDeModelos;
+    }
+
+    public void setNrDeModelos(int nrDeModelos) {
+        this.nrDeModelos = nrDeModelos;
+    }
+
+    public String getAno_de_lançamento() {
+        return ano_de_lançamento;
+    }
+
+    public void setAno_de_lançamento(String ano_de_lançamento) {
+        this.ano_de_lançamento = ano_de_lançamento;
+    }
+
+    public String getCodigo_idenficador() {
+        return codigo_idenficador;
+    }
+
+    public void setCodigo_idenficador(String codigo_idenficador) {
+        this.codigo_idenficador = codigo_idenficador;
     }
 }

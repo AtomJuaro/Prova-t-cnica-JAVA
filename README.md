@@ -95,7 +95,7 @@ variables:
 La clase debe tener un constructor y un método get y set para cada variable de instancia. Además, proporcione un método
 llamado getTotalFatura que calcule el monto de la factura y luego devuelva el monto como un doble. Si el valor no es
 posi vo, debe establecerse en 0. Si el precio por artículo no es posi vo, debe establecerse en 0.0. Escriba una
-aplicación de prueba llamada InvoiceTest (en otro archivo) que demuestre las capacidades de la clase Invoice.
+aplicación de Instancia llamada InvoiceTest (en otro archivo) que demuestre las capacidades de la clase Invoice.
 
 ### proyecto 3
 
@@ -106,7 +106,7 @@ Cree una clase llamada Empleado que incluya tres piezas de información como var
 - y un salario mensual (doble).
 
 La clase debe tener un constructor, obtener y establecer métodos para cada variable de instancia. Escriba una aplicación
-de prueba llamada TestEmployee que cree dos objetos Employee y muestre el salario de cada objeto. Luego dé a cada
+de Instancia llamada TestEmployee que cree dos objetos Employee y muestre el salario de cada objeto. Luego dé a cada
 empleado un aumento del 10 % y vuelva a mostrar el salario anual de cada empleado. Introducir en la clase Empleado una
 variable de clase capaz de contar el número de empleados que han pasado por la empresa hasta la fecha.
 
